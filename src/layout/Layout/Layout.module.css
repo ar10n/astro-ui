@@ -1,0 +1,80 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.sidebar {
+    padding: 20px 40px;
+    border-right: 1px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.admin-credentials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-name,
+.admin-email {
+    font-size: 0.8em;
+}
+
+.admin-name {
+    font-weight: 600;
+}
+
+.exit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: all 0.25s;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 35px;
+}
+
+.link:hover,
+.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.active:hover {
+    background: var(--secondary-color);
+}
+
+.content {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}

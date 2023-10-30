@@ -1,0 +1,14 @@
+:root {
+    --font: 'Exo 2', sans-serif;
+    --primary-color: #1D3557;
+    --secondary-color: #457B9D;
+    --danger-color: #E63946;
+    --success-color: #2ec4b6;
+    --text-dark: #0d1321;
+    --text-light: #fffcf2;
+}
+
+body {
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+}

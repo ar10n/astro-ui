@@ -1,0 +1,12 @@
+.cat-link {
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.cat-link:hover {
+    text-decoration: underline var(--primary-color);
+}
+
+.active {
+    text-decoration: underline var(--primary-color);
+}
