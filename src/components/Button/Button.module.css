@@ -20,10 +20,18 @@
     padding: 10px 60px;
 }
 
-.accent:hover {
+.primary:hover {
     background: var(--secondary-color);
 }
 
-.accent {
+.primary {
     background: var(--primary-color);
+}
+
+.danger {
+    background: var(--danger-color);
+}
+
+.danger:hover {
+    background: #DE5967FF;
 }

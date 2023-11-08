@@ -46,12 +46,16 @@ export function Layout() {
                         ar10n@ya.ru
                     </div>
                 </div>
-                <Button className={styles['exit']} appearence='big'>
+                <Button
+                    className={styles['exit']}
+                    appearence='big'
+                    accent='primary'
+                >
                     Выйти
                 </Button>
             </div>
         </div>
-        <div className={styles['content']}>
+        <div className={styles['outlet']}>
             <Outlet />
         </div>
     </div>;

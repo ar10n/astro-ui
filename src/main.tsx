@@ -8,7 +8,7 @@ import { Error } from './pages/Error/Error.tsx';
 import { Layout } from './layout/Layout.tsx';
 import { Users } from './pages/Users/Users.tsx';
 import { Main } from './pages/Main/Main.tsx';
-// import { Category } from './components/Category/Category.tsx';
+import { Category } from './components/Category/Category.tsx';
 
 const router = createBrowserRouter([
     {
@@ -21,13 +21,13 @@ const router = createBrowserRouter([
             },
             {
                 path: '/categories',
-                element: <Categories />
-                // children: [
-                //     {
-                //         path: '/categories/:id',
-                //         element: <Category />
-                //     }
-                // ]
+                element: <Categories />,
+                children: [
+                    {
+                        path: '/categories/:id',
+                        element: <Category />
+                    }
+                ]
             },
             {
                 path: '/services',

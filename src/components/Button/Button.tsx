@@ -6,12 +6,16 @@ export function Button({
     children,
     className,
     appearence = 'small',
+    accent,
     ...props
 }: ButtonProps) {
     return (
-        <button className={cn(styles['button'], styles['accent'], className, {
+        <button className={cn(styles['button'], className, {
             [styles['small']]: appearence === 'small',
             [styles['big']]: appearence === 'big'
+        }, {
+            [styles['primary']]: accent === 'primary',
+            [styles['danger']]: accent === 'danger'
         })} {...props}>{children}</button>
     );
 }
