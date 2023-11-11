@@ -9,6 +9,7 @@ import { Layout } from './layout/Layout.tsx';
 import { Users } from './pages/Users/Users.tsx';
 import { Main } from './pages/Main/Main.tsx';
 import { Category } from './components/Category/Category.tsx';
+import { CategoryUpdate } from './components/Category/CategoryUpdate.tsx';
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
                     {
                         path: '/categories/:id',
                         element: <Category />
+                    },
+                    {
+                        path: '/categories/:id/update',
+                        element: <CategoryUpdate />
                     }
                 ]
             },
