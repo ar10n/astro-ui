@@ -1,12 +1,36 @@
 import styles from './Category.module.css';
 import { Button } from '../Button/Button.tsx';
 import { NavLink, useParams } from 'react-router-dom';
-import { categories } from '../../../data.ts';
 import cn from 'classnames';
+import { useEffect, useState } from 'react';
+import { CategoryInterface } from '../../interfaces/Category.interface.ts';
+import axios from 'axios';
+import { PREFIX } from '../../helpers/api.ts';
 
 export function Category() {
     const {id} = useParams();
-    const category = categories.find(category => category.id === Number(id));
+    const [category, setCategory] = useState<CategoryInterface>({
+        description: '',
+        id: 0,
+        isPayable: false,
+        name: '',
+        orderNumber: 0
+    });
+    const getCategory = async () => {
+        try {
+            const {data} = await axios.get<CategoryInterface>(
+              `${PREFIX}/categories/${id}`
+            );
+            setCategory(data);
+        } catch (e) {
+            console.error(e);
+            return;
+        }
+    };
+
+    useEffect(() => {
+        getCategory();
+    }, [getCategory]);
 
     return <>
         <div className={styles['content']}>

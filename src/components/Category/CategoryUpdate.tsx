@@ -9,23 +9,48 @@ export function CategoryUpdate() {
     const category = categories.find(category => category.id === Number(id));
 
     return <div className={styles['content']}>
-        <div className={styles['details']}>
-            <form>
-                <div className={'details-pair'}>
-                    <div className={styles['heading']}>Название:</div>
-                    <input type="text" className={styles['name']}/>
+        <form className={styles['details-update']}>
+            <div className={'details-pair-update'}>
+                <div>
+                    <label
+                        htmlFor="name"
+                        className={styles['update-heading']}
+                    >
+                        Название:
+                    </label>
                 </div>
-                <div className={'details-pair'}>
-                    <div className={styles['heading']}>Описание:</div>
-                    <textarea name='description' cols={30} rows={10}></textarea>
+                <div>
+                    <input
+                        type="text"
+                        id="name"
+                        className={styles['update-name']}
+                    />
                 </div>
-            </form>
-        </div>
+            </div>
+            <div className={'details-pair-update'}>
+                <div>
+                    <label
+                        htmlFor="description"
+                        className={styles['update-heading']}
+                    >
+                        Описание:
+                    </label>
+                </div>
+                <div>
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows={10}
+                    >
+                    </textarea>
+                </div>
+            </div>
+        </form>
         <div className={styles['buttons']}>
             <Button
                 className={styles['edit']}
-                appearence='big'
-                accent='primary'
+                appearence="big"
+                accent="primary"
             >
                 Сохранить
             </Button>
@@ -37,8 +62,8 @@ export function CategoryUpdate() {
             >
                 <Button
                     className={styles['delete']}
-                    appearence='big'
-                    accent='danger'
+                    appearence="big"
+                    accent="danger"
                 >
                     Не сохранять
                 </Button>
