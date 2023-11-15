@@ -16,11 +16,13 @@ export function Category() {
         name: '',
         orderNumber: 0
     });
+
     const getCategory = async () => {
         try {
             const {data} = await axios.get<CategoryInterface>(
               `${PREFIX}/categories/${id}`
             );
+            console.log('got it!');
             setCategory(data);
         } catch (e) {
             console.error(e);
@@ -30,7 +32,7 @@ export function Category() {
 
     useEffect(() => {
         getCategory();
-    }, [getCategory]);
+    }, [id]);
 
     return <>
         <div className={styles['content']}>

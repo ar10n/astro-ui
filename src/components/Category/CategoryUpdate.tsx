@@ -2,11 +2,11 @@ import styles from './Category.module.css';
 import { NavLink, useParams } from 'react-router-dom';
 import cn from 'classnames';
 import { Button } from '../Button/Button.tsx';
-import { categories } from '../../../data.ts';
+// import { categories } from '../../../data.ts';
 
 export function CategoryUpdate() {
-    const {id} = useParams();
-    const category = categories.find(category => category.id === Number(id));
+    // const {id} = useParams();
+    // const category = categories.find(category => category.id === Number(id));
 
     return <div className={styles['content']}>
         <form className={styles['details-update']}>

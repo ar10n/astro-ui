@@ -1,21 +1,19 @@
 .content {
     display: flex;
-    flex-grow: 1;
+    /*flex-grow: 1;*/
 }
 
 .list {
     display: flex;
     flex-direction: column;
     border-right: 1px solid var(--primary-color);
-    padding: 20px 35px;
+    padding: 20px 40px;
 }
 
 .menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
-    padding: 0;
 }
 
 .buttons {
@@ -26,8 +24,8 @@
 
 .details {
     display: flex;
-    flex-grow: 1;
-    padding: 20px 40px;
+    /*flex-grow: 1;*/
+    padding: 20px 35px;
 }
 
 .link {
@@ -36,18 +34,15 @@
     justify-content: center;
     text-decoration: none;
     color: var(--text-dark);
-    transition: all 0.25s;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 35px;
+    transition: all 0.5s;
+    border-bottom: 1px solid white;
+    padding: 5px 0;
 }
 
-.link:hover,
+.link:hover {
+    border-bottom: 1px solid var(--primary-color);
+}
+
 .active {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-}
-
-.active:hover {
-    background: var(--secondary-color);
+    border-bottom: 1px solid var(--primary-color);
 }

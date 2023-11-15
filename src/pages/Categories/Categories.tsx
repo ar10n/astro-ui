@@ -23,7 +23,7 @@ export function Categories() {
 
     useEffect(() => {
         getCategories();
-    }, [getCategories]);
+    }, []);
 
     return <>
         <div className={styles['content']}>
