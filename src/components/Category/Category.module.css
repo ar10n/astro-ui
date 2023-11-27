@@ -71,3 +71,7 @@
 /*.active:hover {*/
 /*    background: var(--secondary-color);*/
 /*}*/
+
+textarea {
+    resize: none;
+}

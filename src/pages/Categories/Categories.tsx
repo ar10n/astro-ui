@@ -1,11 +1,11 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import {NavLink, Outlet} from 'react-router-dom';
 import styles from './Categories.module.css';
 import cn from 'classnames';
-import { Button } from '../../components/Button/Button.tsx';
-import { useEffect, useState } from 'react';
-import { CategoryInterface } from '../../interfaces/Category.interface.ts';
+import {Button} from '../../components/Button/Button.tsx';
+import {useEffect, useState} from 'react';
+import {CategoryInterface} from '../../interfaces/Category.interface.ts';
 import axios from 'axios';
-import { PREFIX } from '../../helpers/api.ts';
+import {PREFIX} from '../../helpers/api.ts';
 
 export function Categories() {
     const [categories, setCategories] = useState<CategoryInterface[]>([]);
@@ -26,15 +26,22 @@ export function Categories() {
     }, []);
 
     return <>
-        <div className={styles['content']}>
-            <div className={styles['list']}>
-                <div className={styles['menu']}>
+        <div className='row vh-100'>
+            <div className='
+                col-auto
+                d-flex
+                flex-column
+                justify-content-between
+            '>
+                <div>
                     {categories.map(category =>
                         <NavLink
                             to={`/categories/${category.id}`}
-                            className={({isActive}) => cn(styles['link'], {
-                                [styles.active]: isActive
-                            })}
+                            className={({isActive}) => cn(
+                                'm-2',
+                                styles['link'],
+                                {[styles.active]: isActive}
+                            )}
                             key={category.id}
                         >
                             {category.name}
@@ -42,7 +49,7 @@ export function Categories() {
                 </div>
                 <div className={styles['buttons']}>
                     <Button
-                        className={styles['create']}
+                        className='m-2'
                         appearence="big"
                         accent="primary"
                     >
@@ -50,7 +57,7 @@ export function Categories() {
                     </Button>
                 </div>
             </div>
-            <div className={styles['details']}>
+            <div className='col'>
                 <Outlet/>
             </div>
         </div>
